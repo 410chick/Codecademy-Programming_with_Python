@@ -27,8 +27,6 @@ class TomeRater():
         for book in user_books:
             self.add_book_to_user(book, email)
 
-
-    ### Used to check if the isbn is already in the catalog.  
     def check_isbn_exists(self, isbn):
         isbn_list = [book.get_isbn() for book in self.books.keys()]
         return (isbn in isbn_list)
